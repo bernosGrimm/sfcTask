@@ -2,9 +2,7 @@
 
 ## Aufgabe 1
 
-
-
-![](.\out\task1\task1.svg)
+![](out\task1\task1.svg)
 
 Das System sollte mindestens aus einem Wasserstoffspeicher, einer Brennstoffzelle, einem Laderegler, einer Steuereinheit und einer Batterieanlage in geeigneter größe bestehen.
 
@@ -12,9 +10,9 @@ Um die Sicherheit im System zu gewährleisten überwacht die Steuereinheit, para
 Zudem ist die Steuereinheit mit ihrem eigenem Notstromspeicher ausgestattet um bei Fehlersituationen das System Abschalten zu können.
 
 ## Aufgabe 2
-![](.\out\task21\task21.svg)
-![](.\out\task22\task22.svg)
-![](.\out\task23\task23.svg)
+![](out\task21\task21.svg)
+![](out\task22\task22.svg)
+![](out\task23\task23.svg)
 
 
 
