@@ -1,0 +1,22 @@
+@startuml task23
+left to right direction
+class PortStructure{
+uint8 portID
+..
+enum PortType
+}
+
+enum PortType
+{
+    NOT_ACTIVE
+    ..
+    VOLTAGE
+    ..
+    CURRENT
+    ..
+    TEMPERATURE
+}
+
+PortStructure::PortType *-- PortType
+
+@enduml

@@ -1,0 +1,21 @@
+@startuml task21
+skinparam componentStyle rectangle
+
+component Zusatzmodul{
+    component AnalogPorts{
+        component Port1
+        component Port2
+        component Port3
+        component Port4
+        Port1 -[hidden]-> Port2
+        Port2 -[hidden]-> Port3
+        Port3 -[hidden]-> Port4
+    }
+    component CPU{
+    
+    }
+    Component CAN
+    AnalogPorts --> CPU
+    CPU <-> CAN
+}
+@enduml

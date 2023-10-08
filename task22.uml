@@ -1,0 +1,32 @@
+@startuml 
+package Zusatzmodul {
+start 
+
+:load analog port config from NVM;
+if(validate config) then (no)
+:set config to NOT_ACTIVE;
+:send status over CAN: ports NOT_ACTIVE;
+else (yes)
+endif
+:set port config;
+
+repeat :read analog data;
+:send data over CAN;
+if (Interrupt:\nnew config over CAN) then (yes)
+
+:get new config;
+
+if(validate new config) then (yes)
+:save new config to NVM;
+:set new port config;
+:send new status over CAN;
+else (no)
+:send error message;
+endif
+endif
+
+repeat while (True)
+
+}
+@enduml
+

@@ -1,0 +1,36 @@
+@startuml task1
+database htank [
+    
+    
+    Wasserstoffspeicher 
+
+
+]
+node bzelle [
+    Brennstoffzelle
+]
+node Laderegler [
+    Laderegler
+    ----
+    CC-CV Verfahren
+    Überwacht das Laden mit 
+    konstanten Strom und 
+    konstanter Spannung
+]
+node Batterie
+node Steuereinheit [
+    Steuereinheit
+    ----
+    Mit Notstromversorgung
+]
+
+
+htank = bzelle :Wasserstoff
+bzelle - Laderegler :Strom
+Laderegler - Batterie :Ladestrom
+Laderegler -- Steuereinheit #red;text:red :Überwachung Eingangsstrom\nund Ladeparameter
+htank -- Steuereinheit #blue;text:blue : Füllstand
+bzelle -- Steuereinheit #green;text:green :Temperatur
+Batterie -- Steuereinheit #lightgreen;text:lightgreen :Ladezustandt\nTemperatur
+
+@enduml
